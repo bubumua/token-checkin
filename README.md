@@ -9,6 +9,8 @@
 - `linuxdoapi`: `POST https://linuxdoapi.223384.xyz/api/user/checkin`
 - `hotaruapi`: `POST https://hotaruapi.com/api/user/checkin`
 - `zhansi`: `POST https://ai.zhansi.top/api/user/checkin`
+- `zzhdsgsss`: `POST https://ai.zzhdsgsss.xyz/api/user/checkin`
+- `stephecurry`: `POST https://stephecurry.asia/api/user/checkin`
 
 ## 1. 准备
 
@@ -40,6 +42,8 @@ npx wrangler secret put SESSION_COOKIE_LINUXDOAPI
 npx wrangler secret put SESSION_COOKIE_HOTARUAPI
 npx wrangler secret put EXTRA_COOKIE_HOTARUAPI
 npx wrangler secret put SESSION_COOKIE_ZHANSI
+npx wrangler secret put SESSION_COOKIE_ZZHDSGSSS
+npx wrangler secret put SESSION_COOKIE_STEPHECURRY
 npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```
@@ -72,6 +76,8 @@ curl -X POST "https://<你的worker域名>/run/duckcoding"
 curl -X POST "https://<你的worker域名>/run/linuxdoapi"
 curl -X POST "https://<你的worker域名>/run/hotaruapi"
 curl -X POST "https://<你的worker域名>/run/zhansi"
+curl -X POST "https://<你的worker域名>/run/zzhdsgsss"
+curl -X POST "https://<你的worker域名>/run/stephecurry"
 ```
 
 手动触发并同步发送 Telegram 汇总（用于排查通知链路）：
