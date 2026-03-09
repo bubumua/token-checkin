@@ -46,6 +46,7 @@ npx wrangler secret put SESSION_COOKIE_ZHANSI
 npx wrangler secret put SESSION_COOKIE_ZZHDSGSSS
 npx wrangler secret put SESSION_COOKIE_STEPHECURRY
 npx wrangler secret put SESSION_COOKIE_CHENGMO
+npx wrangler secret put EXTRA_COOKIE_CHENGMO
 npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```
@@ -53,6 +54,7 @@ npx wrangler secret put TELEGRAM_CHAT_ID
 输入时只粘贴 `session` 的值本体（不要带 `session=`）。
 `EXTRA_COOKIE_HOTARUAPI` 填除 `session` 外的 Cookie 字符串，例如：`cf_clearance=xxxx`。
 如果后续该站还要求其他 Cookie，可按 `k1=v1; k2=v2` 一起填到 `EXTRA_COOKIE_HOTARUAPI`。
+`EXTRA_COOKIE_CHENGMO` 同样填写 `session` 之外的 Cookie，例如：`cf_clearance=xxxx`。
 `TELEGRAM_CHAT_ID` 示例：`-1002222744081`。
 
 ## 3. 部署
@@ -118,4 +120,5 @@ npm run tail
 
 - 你抓包得到的 `session` 视为已暴露，建议先让旧会话失效并换新值。
 - `hotaruapi` 的 `cf_clearance` 可能会过期；若签到失败，优先更新 `EXTRA_COOKIE_HOTARUAPI`。
+- `chengmo` 若返回 401 未登录，优先更新 `SESSION_COOKIE_CHENGMO` 和 `EXTRA_COOKIE_CHENGMO`。
 - 若某站点是按北京时间 00:00 刷新，建议把 `cron` 调整到 UTC 对应时刻附近并保留冗余重试频率（比如每小时一次）。
