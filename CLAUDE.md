@@ -16,6 +16,11 @@ npx wrangler secret put SESSION_COOKIE_DUCKCODING
 npx wrangler secret put SESSION_COOKIE_LINUXDOAPI
 npx wrangler secret put SESSION_COOKIE_HOTARUAPI
 npx wrangler secret put EXTRA_COOKIE_HOTARUAPI   # additional cookies beyond session
+npx wrangler secret put SESSION_COOKIE_ZHANSI
+npx wrangler secret put SESSION_COOKIE_ZZHDSGSSS
+npx wrangler secret put SESSION_COOKIE_STEPHECURRY
+npx wrangler secret put SESSION_COOKIE_CHENGMO
+npx wrangler secret put EXTRA_COOKIE_CHENGMO     # cf_clearance for chengmo
 npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```
