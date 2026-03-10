@@ -21,6 +21,7 @@ npx wrangler secret put SESSION_COOKIE_ZZHDSGSSS
 npx wrangler secret put SESSION_COOKIE_STEPHECURRY
 npx wrangler secret put SESSION_COOKIE_CHENGMO
 npx wrangler secret put EXTRA_COOKIE_CHENGMO     # cf_clearance for chengmo
+npx wrangler secret put SESSION_COOKIE_NIH
 npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```

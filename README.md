@@ -12,6 +12,7 @@
 - `zzhdsgsss`: `POST https://ai.zzhdsgsss.xyz/api/user/checkin`
 - `stephecurry`: `POST https://stephecurry.asia/api/user/checkin`
 - `chengmo`: `POST https://api.chengmo.cc.cd/api/user/checkin`
+- `nih`: `POST https://nih.cc/api/user/checkin`
 
 ## 1. 准备
 
@@ -47,6 +48,7 @@ npx wrangler secret put SESSION_COOKIE_ZZHDSGSSS
 npx wrangler secret put SESSION_COOKIE_STEPHECURRY
 npx wrangler secret put SESSION_COOKIE_CHENGMO
 npx wrangler secret put EXTRA_COOKIE_CHENGMO
+npx wrangler secret put SESSION_COOKIE_NIH
 npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```
@@ -83,6 +85,7 @@ curl -X POST "https://<你的worker域名>/run/zhansi"
 curl -X POST "https://<你的worker域名>/run/zzhdsgsss"
 curl -X POST "https://<你的worker域名>/run/stephecurry"
 curl -X POST "https://<你的worker域名>/run/chengmo"
+curl -X POST "https://<你的worker域名>/run/nih"
 ```
 
 手动触发并同步发送 Telegram 汇总（用于排查通知链路）：
