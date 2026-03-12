@@ -1,3 +1,5 @@
+import defaultTargets from "./targets.json";
+
 const JSON_HEADERS = {
   "content-type": "application/json; charset=utf-8",
 };
@@ -234,6 +236,10 @@ function parseTargets(env) {
       throw new Error("CHECKIN_TARGETS must be a non-empty JSON array");
     }
     return parsed;
+  }
+
+  if (Array.isArray(defaultTargets) && defaultTargets.length > 0) {
+    return defaultTargets;
   }
 
   // Backward-compatible fallback for legacy single-target config.

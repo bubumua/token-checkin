@@ -15,7 +15,7 @@ Keep runtime logic in `src/`. Avoid placing application code in root-level confi
 - `npm run dev`: run Worker locally with Wrangler dev server.
 - `npm run deploy`: publish the Worker to Cloudflare.
 - `npm run tail`: stream production logs from Cloudflare.
-- `npx wrangler secret put SESSION_COOKIE_DKJSIOGU`: set a required secret (repeat for other targets: DUCKCODING, LINUXDOAPI, HOTARUAPI, EXTRA_COOKIE_HOTARUAPI, ZHANSI, ZZHDSGSSS, STEPHECURRY, CHENGMO, EXTRA_COOKIE_CHENGMO, NIH, HUAN666).
+- `npx wrangler secret put SESSION_COOKIE_DKJSIOGU`: set a required secret (repeat for other targets: DUCKCODING, LINUXDOAPI, HOTARUAPI, EXTRA_COOKIE_HOTARUAPI, ZHANSI, ZZHDSGSSS, STEPHECURRY, CHENGMO, EXTRA_COOKIE_CHENGMO, NIH, HUAN666, AIAPI3W).
 
 Manual smoke checks (after `npm run dev` or deploy):
 - `curl -X POST http://localhost:8787/run`

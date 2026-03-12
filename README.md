@@ -13,6 +13,8 @@
 - `stephecurry`: `POST https://stephecurry.asia/api/user/checkin`
 - `chengmo`: `POST https://api.chengmo.cc.cd/api/user/checkin`
 - `nih`: `POST https://nih.cc/api/user/checkin`
+- `huan666`: `POST https://ai.huan666.de/api/user/checkin`
+- `aiapi3w`: `POST https://aiapi.3w.cx/api/user/checkin`
 
 ## 1. 准备
 
@@ -24,9 +26,9 @@ npm install
 
 ## 2. 配置变量
 
-编辑 `wrangler.json`：
+编辑 `src/targets.json`：
 
-- `CHECKIN_TARGETS` 中每个目标都要包含：
+- 每个目标都要包含：
   - `name`
   - `url`
   - `origin`
@@ -49,6 +51,8 @@ npx wrangler secret put SESSION_COOKIE_STEPHECURRY
 npx wrangler secret put SESSION_COOKIE_CHENGMO
 npx wrangler secret put EXTRA_COOKIE_CHENGMO
 npx wrangler secret put SESSION_COOKIE_NIH
+npx wrangler secret put SESSION_COOKIE_HUAN666
+npx wrangler secret put SESSION_COOKIE_AIAPI3W
 npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```
@@ -86,6 +90,8 @@ curl -X POST "https://<你的worker域名>/run/zzhdsgsss"
 curl -X POST "https://<你的worker域名>/run/stephecurry"
 curl -X POST "https://<你的worker域名>/run/chengmo"
 curl -X POST "https://<你的worker域名>/run/nih"
+curl -X POST "https://<你的worker域名>/run/huan666"
+curl -X POST "https://<你的worker域名>/run/aiapi3w"
 ```
 
 手动触发并同步发送 Telegram 汇总（用于排查通知链路）：

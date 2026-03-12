@@ -1,0 +1,93 @@
+[
+  {
+    "name": "dkjsiogu",
+    "url": "https://api.dkjsiogu.me/api/user/claim_quota",
+    "origin": "https://api.dkjsiogu.me",
+    "referer": "https://api.dkjsiogu.me/console/personal",
+    "newApiUser": "2756",
+    "sessionSecret": "SESSION_COOKIE_DKJSIOGU"
+  },
+  {
+    "name": "duckcoding",
+    "url": "https://free.duckcoding.com/api/user/checkin",
+    "origin": "https://free.duckcoding.com",
+    "referer": "https://free.duckcoding.com/console/personal",
+    "newApiUser": "8795",
+    "sessionSecret": "SESSION_COOKIE_DUCKCODING"
+  },
+  {
+    "name": "linuxdoapi",
+    "url": "https://linuxdoapi.223384.xyz/api/user/checkin",
+    "origin": "https://linuxdoapi.223384.xyz",
+    "referer": "https://linuxdoapi.223384.xyz/console/personal",
+    "newApiUser": "6592",
+    "sessionSecret": "SESSION_COOKIE_LINUXDOAPI",
+    "cookiePrefix": "wzhteam_consent={\"QUQf\":true}"
+  },
+  {
+    "name": "hotaruapi",
+    "url": "https://hotaruapi.com/api/user/checkin",
+    "origin": "https://hotaruapi.com",
+    "referer": "https://hotaruapi.com/console/personal",
+    "newApiUser": "9771",
+    "sessionSecret": "SESSION_COOKIE_HOTARUAPI",
+    "extraCookieSecret": "EXTRA_COOKIE_HOTARUAPI"
+  },
+  {
+    "name": "zhansi",
+    "url": "https://ai.zhansi.top/api/user/checkin",
+    "origin": "https://ai.zhansi.top",
+    "referer": "https://ai.zhansi.top/console/personal",
+    "newApiUser": "1224",
+    "sessionSecret": "SESSION_COOKIE_ZHANSI"
+  },
+  {
+    "name": "zzhdsgsss",
+    "url": "https://ai.zzhdsgsss.xyz/api/user/checkin",
+    "origin": "https://ai.zzhdsgsss.xyz",
+    "referer": "https://ai.zzhdsgsss.xyz/console/personal",
+    "newApiUser": "1943",
+    "sessionSecret": "SESSION_COOKIE_ZZHDSGSSS"
+  },
+  {
+    "name": "stephecurry",
+    "url": "https://stephecurry.asia/api/user/checkin",
+    "origin": "https://stephecurry.asia",
+    "referer": "https://stephecurry.asia/console/personal",
+    "newApiUser": "2137",
+    "sessionSecret": "SESSION_COOKIE_STEPHECURRY"
+  },
+  {
+    "name": "chengmo",
+    "url": "https://api.chengmo.cc.cd/api/user/checkin",
+    "origin": "https://api.chengmo.cc.cd",
+    "referer": "https://api.chengmo.cc.cd/console/personal",
+    "newApiUser": "181",
+    "sessionSecret": "SESSION_COOKIE_CHENGMO",
+    "extraCookieSecret": "EXTRA_COOKIE_CHENGMO"
+  },
+  {
+    "name": "nih",
+    "url": "https://nih.cc/api/user/checkin",
+    "origin": "https://nih.cc",
+    "referer": "https://nih.cc/console/personal",
+    "newApiUser": "1825",
+    "sessionSecret": "SESSION_COOKIE_NIH"
+  },
+  {
+    "name": "huan666",
+    "url": "https://ai.huan666.de/api/user/checkin",
+    "origin": "https://ai.huan666.de",
+    "referer": "https://ai.huan666.de/console/personal",
+    "newApiUser": "12351",
+    "sessionSecret": "SESSION_COOKIE_HUAN666"
+  },
+  {
+    "name": "aiapi3w",
+    "url": "https://aiapi.3w.cx/api/user/checkin",
+    "origin": "https://aiapi.3w.cx",
+    "referer": "https://aiapi.3w.cx/console/personal",
+    "newApiUser": "169",
+    "sessionSecret": "SESSION_COOKIE_AIAPI3W"
+  }
+]
