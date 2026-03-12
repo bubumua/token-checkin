@@ -89,5 +89,13 @@
     "referer": "https://aiapi.3w.cx/console/personal",
     "newApiUser": "169",
     "sessionSecret": "SESSION_COOKIE_AIAPI3W"
+  },
+  {
+    "name": "api925214",
+    "url": "https://api.925214.xyz/api/user/checkin",
+    "origin": "https://api.925214.xyz",
+    "referer": "https://api.925214.xyz/console/personal",
+    "newApiUser": "1187",
+    "sessionSecret": "SESSION_COOKIE_API925214"
   }
 ]

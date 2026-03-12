@@ -15,6 +15,7 @@
 - `nih`: `POST https://nih.cc/api/user/checkin`
 - `huan666`: `POST https://ai.huan666.de/api/user/checkin`
 - `aiapi3w`: `POST https://aiapi.3w.cx/api/user/checkin`
+- `api925214`: `POST https://api.925214.xyz/api/user/checkin`
 
 ## 1. 准备
 
@@ -26,7 +27,7 @@ npm install
 
 ## 2. 配置变量
 
-编辑 `src/targets.json`：
+编辑 `src/targets.json`（站点列表）：
 
 - 每个目标都要包含：
   - `name`
@@ -35,7 +36,9 @@ npm install
   - `referer`
   - `newApiUser`
   - `sessionSecret`
-- `crons` 为 UTC 时区表达式
+如需修改定时频率，编辑 `wrangler.json`：
+
+- `triggers.crons` 为 UTC 时区表达式
 
 设置各站点 secret（不要写进代码）：
 
@@ -53,6 +56,7 @@ npx wrangler secret put EXTRA_COOKIE_CHENGMO
 npx wrangler secret put SESSION_COOKIE_NIH
 npx wrangler secret put SESSION_COOKIE_HUAN666
 npx wrangler secret put SESSION_COOKIE_AIAPI3W
+npx wrangler secret put SESSION_COOKIE_API925214
 npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```
@@ -92,6 +96,7 @@ curl -X POST "https://<你的worker域名>/run/chengmo"
 curl -X POST "https://<你的worker域名>/run/nih"
 curl -X POST "https://<你的worker域名>/run/huan666"
 curl -X POST "https://<你的worker域名>/run/aiapi3w"
+curl -X POST "https://<你的worker域名>/run/api925214"
 ```
 
 手动触发并同步发送 Telegram 汇总（用于排查通知链路）：

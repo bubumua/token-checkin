@@ -4,7 +4,8 @@
 This repository is a small Cloudflare Worker project.
 
 - `src/worker.js`: main Worker entrypoint (HTTP handlers + scheduled trigger logic).
-- `wrangler.json`: Worker name, entry file, cron triggers, and `CHECKIN_TARGETS` config.
+- `src/targets.json`: default checkin targets list (deployed with the Worker bundle).
+- `wrangler.json`: Worker name, entry file, and cron triggers.
 - `README.md`: setup and manual verification examples.
 - `package.json`: local scripts for development, deploy, and log tailing.
 
@@ -15,7 +16,7 @@ Keep runtime logic in `src/`. Avoid placing application code in root-level confi
 - `npm run dev`: run Worker locally with Wrangler dev server.
 - `npm run deploy`: publish the Worker to Cloudflare.
 - `npm run tail`: stream production logs from Cloudflare.
-- `npx wrangler secret put SESSION_COOKIE_DKJSIOGU`: set a required secret (repeat for other targets: DUCKCODING, LINUXDOAPI, HOTARUAPI, EXTRA_COOKIE_HOTARUAPI, ZHANSI, ZZHDSGSSS, STEPHECURRY, CHENGMO, EXTRA_COOKIE_CHENGMO, NIH, HUAN666, AIAPI3W).
+- `npx wrangler secret put SESSION_COOKIE_DKJSIOGU`: set a required secret (repeat for other targets: DUCKCODING, LINUXDOAPI, HOTARUAPI, EXTRA_COOKIE_HOTARUAPI, ZHANSI, ZZHDSGSSS, STEPHECURRY, CHENGMO, EXTRA_COOKIE_CHENGMO, NIH, HUAN666, AIAPI3W, API925214).
 
 Manual smoke checks (after `npm run dev` or deploy):
 - `curl -X POST http://localhost:8787/run`
@@ -50,4 +51,4 @@ Git history is not available in this workspace snapshot, so use a clear conventi
 ## Security & Configuration Tips
 - Never commit real session cookies or secrets.
 - Store credentials only with Wrangler secrets.
-- Treat `CHECKIN_TARGETS` values as deploy-time configuration, not hardcoded runtime secrets.
+- Treat `src/targets.json` (or `CHECKIN_TARGETS` override) as deploy-time target configuration, not a place to store cookies/secrets.
