@@ -99,7 +99,7 @@
     "sessionSecret": "SESSION_COOKIE_API925214"
   },
   {
-    "name": "不知道叫啥api",
+    "name": "idontknowapi",
     "url": "https://newapi.kl.edu.kg/api/user/checkin",
     "origin": "https://newapi.kl.edu.kg",
     "referer": "https://newapi.kl.edu.kg/console/personal",

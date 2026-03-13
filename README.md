@@ -16,6 +16,9 @@
 - `huan666`: `POST https://ai.huan666.de/api/user/checkin`
 - `aiapi3w`: `POST https://aiapi.3w.cx/api/user/checkin`
 - `api925214`: `POST https://api.925214.xyz/api/user/checkin`
+- `idontknowapi`: `POST https://newapi.kl.edu.kg/api/user/checkin`
+- `zenscaleai`: `POST https://lc.zenscaleai.com/api/user/checkin`
+- `42api`: `POST https://api.42w.shop/api/user/checkin`
 
 ## 1. 准备
 
@@ -57,6 +60,10 @@ npx wrangler secret put SESSION_COOKIE_NIH
 npx wrangler secret put SESSION_COOKIE_HUAN666
 npx wrangler secret put SESSION_COOKIE_AIAPI3W
 npx wrangler secret put SESSION_COOKIE_API925214
+npx wrangler secret put SESSION_COOKIE_KLEDUKG_API
+npx wrangler secret put SESSION_COOKIE_ZENSCALEAI
+npx wrangler secret put SESSION_COOKIE_42API
+npx wrangler secret put EXTRA_COOKIE_42API
 npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```
@@ -65,6 +72,7 @@ npx wrangler secret put TELEGRAM_CHAT_ID
 `EXTRA_COOKIE_HOTARUAPI` 填除 `session` 外的 Cookie 字符串，例如：`cf_clearance=xxxx`。
 如果后续该站还要求其他 Cookie，可按 `k1=v1; k2=v2` 一起填到 `EXTRA_COOKIE_HOTARUAPI`。
 `EXTRA_COOKIE_CHENGMO` 同样填写 `session` 之外的 Cookie，例如：`cf_clearance=xxxx`。
+`EXTRA_COOKIE_42API` 同样填写 `session` 之外的 Cookie，例如：`cf_clearance=xxxx`。
 `TELEGRAM_CHAT_ID` 示例：`-1002222744081`。
 
 ## 3. 部署
@@ -97,6 +105,9 @@ curl -X POST "https://<你的worker域名>/run/nih"
 curl -X POST "https://<你的worker域名>/run/huan666"
 curl -X POST "https://<你的worker域名>/run/aiapi3w"
 curl -X POST "https://<你的worker域名>/run/api925214"
+curl -X POST "https://<你的worker域名>/run/idontknowapi"
+curl -X POST "https://<你的worker域名>/run/zenscaleai"
+curl -X POST "https://<你的worker域名>/run/42api"
 ```
 
 手动触发并同步发送 Telegram 汇总（用于排查通知链路）：
