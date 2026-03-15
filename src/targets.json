@@ -122,5 +122,13 @@
     "newApiUser": "3292",
     "sessionSecret": "SESSION_COOKIE_42API",
     "extraCookieSecret": "EXTRA_COOKIE_42API"
+  },
+  {
+    "name": "COULSON",
+    "url": "https://apitl.de5.net/api/user/checkin",
+    "origin": "https://apitl.de5.net",
+    "referer": "https://apitl.de5.net/console/personal",
+    "newApiUser": "358",
+    "sessionSecret": "SESSION_COOKIE_COULSON"
   }
 ]
