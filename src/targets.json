@@ -130,5 +130,124 @@
     "referer": "https://apitl.de5.net/console/personal",
     "newApiUser": "358",
     "sessionSecret": "SESSION_COOKIE_COULSON"
+  },
+  {
+    "name": "APIKEY_WELFARE",
+    "url": "https://welfare.apikey.cc/api/user/checkin",
+    "origin": "https://welfare.apikey.cc",
+    "referer": "https://welfare.apikey.cc/console/personal",
+    "newApiUser": "5304",
+    "sessionSecret": "SESSION_COOKIE_APIKEY_WELFARE"
+  },
+  {
+    "name": "dev88",
+    "url": "https://api.dev88.tech/api/user/checkin",
+    "origin": "https://api.dev88.tech",
+    "referer": "https://api.dev88.tech/console/personal",
+    "newApiUser": "5933",
+    "sessionSecret": "SESSION_COOKIE_DEV88",
+    "extraCookieSecret": "EXTRA_COOKIE_DEV88"
+  },
+  {
+    "name": "ThatAPI",
+    "url": "https://gyapi.zxiaoruan.cn/api/user/checkin",
+    "origin": "https://gyapi.zxiaoruan.cn",
+    "referer": "https://gyapi.zxiaoruan.cn/console/personal",
+    "newApiUser": "5503",
+    "sessionSecret": "SESSION_COOKIE_THATAPI",
+    "extraCookieSecret": "EXTRA_COOKIE_THATAPI"
+  },
+  {
+    "name": "Elysiver",
+    "url": "https://elysiver.h-e.top/api/user/checkin",
+    "origin": "https://elysiver.h-e.top",
+    "referer": "https://elysiver.h-e.top/console/personal",
+    "newApiUser": "16963",
+    "sessionSecret": "SESSION_COOKIE_ELYSIVER",
+    "extraCookieSecret": "EXTRA_COOKIE_ELYSIVER"
+  },
+  {
+    "name": "aidrouter",
+    "url": "https://aidrouter.qzz.io/api/user/checkin",
+    "origin": "https://aidrouter.qzz.io",
+    "referer": "https://aidrouter.qzz.io/console/personal",
+    "newApiUser": "6165",
+    "sessionSecret": "SESSION_COOKIE_AIDROUTER",
+    "extraCookieSecret": "EXTRA_COOKIE_AIDROUTER"
+  },
+  {
+    "name": "daiju",
+    "url": "https://api.daiju.live/api/user/checkin",
+    "origin": "https://api.daiju.live",
+    "referer": "https://api.daiju.live/console/personal",
+    "newApiUser": "7304",
+    "sessionSecret": "SESSION_COOKIE_DAIJU",
+    "extraCookieSecret": "EXTRA_COOKIE_DAIJU"
+  },
+  {
+    "name": "moapi",
+    "url": "https://api.268526.eu.cc/api/user/checkin被拦截且量少",
+    "origin": "https://api.268526.eu.cc",
+    "referer": "https://api.268526.eu.cc/console/personal",
+    "newApiUser": "2073",
+    "sessionSecret": "SESSION_COOKIE_MOAPI",
+    "extraCookieSecret": "EXTRA_COOKIE_MOAPI"
+  },
+  {
+    "name": "linuxdoedurs",
+    "url": "https://newapi.linuxdo.edu.rs/api/user/checkin",
+    "origin": "https://newapi.linuxdo.edu.rs",
+    "referer": "https://newapi.linuxdo.edu.rs/console/personal",
+    "newApiUser": "6710",
+    "sessionSecret": "SESSION_COOKIE_LINUXDOEDURS",
+    "extraCookieSecret": "EXTRA_COOKIE_LINUXDOEDURS"
+  },
+  {
+    "name": "openai.api-test.us.ci",
+    "url": "https://openai.api-test.us.ci/api/user/checkin",
+    "origin": "https://openai.api-test.us.ci",
+    "referer": "https://openai.api-test.us.ci/console/personal",
+    "newApiUser": "9035",
+    "sessionSecret": "SESSION_COOKIE_OPENAI_API_TEST_US_CI"
+  },
+  {
+    "name": "laoxi",
+    "url": "https://laoxi.ethan010203.online/api/user/checkin",
+    "origin": "https://laoxi.ethan010203.online",
+    "referer": "https://laoxi.ethan010203.online/console/personal",
+    "newApiUser": "2691",
+    "sessionSecret": "SESSION_COOKIE_LAOXI"
+  },
+  {
+    "name": "yybbwan",
+    "url": "https://yybbwan.xyz/api/user/checkin",
+    "origin": "https://yybbwan.xyz",
+    "referer": "https://yybbwan.xyz/console/personal",
+    "newApiUser": "3008",
+    "sessionSecret": "SESSION_COOKIE_YYBBWAN"
+  },
+  {
+    "name": "suimi",
+    "url": "https://newapi.suimi.ccwu.cc/api/user/checkin",
+    "origin": "https://newapi.suimi.ccwu.cc",
+    "referer": "https://newapi.suimi.ccwu.cc/console/personal",
+    "newApiUser": "1148",
+    "sessionSecret": "SESSION_COOKIE_SUIMI"
+  },
+  {
+    "name": "dgbmc",
+    "url": "https://freeapi.dgbmc.top/api/user/checkin",
+    "origin": "https://freeapi.dgbmc.top",
+    "referer": "https://freeapi.dgbmc.top/console/personal",
+    "newApiUser": "5269",
+    "sessionSecret": "SESSION_COOKIE_DGBMC"
+  },
+  {
+    "name": "marydown",
+    "url": "https://marybrown.dpdns.org/api/user/checkin",
+    "origin": "https://marybrown.dpdns.org",
+    "referer": "https://marybrown.dpdns.org/console/personal",
+    "newApiUser": "1107",
+    "sessionSecret": "SESSION_COOKIE_MARYDOWN"
   }
 ]
