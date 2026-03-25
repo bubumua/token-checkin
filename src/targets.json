@@ -249,5 +249,13 @@
     "referer": "https://marybrown.dpdns.org/console/personal",
     "newApiUser": "1107",
     "sessionSecret": "SESSION_COOKIE_MARYDOWN"
+  },
+  {
+    "name": "dudu",
+    "url": "https://wududu.edu.kg/api/user/checkin",
+    "origin": "https://wududu.edu.kg",
+    "referer": "https://wududu.edu.kg/console/personal",
+    "newApiUser": "849",
+    "sessionSecret": "SESSION_COOKIE_DUDU"
   }
 ]
