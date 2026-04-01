@@ -1,3 +1,5 @@
 node_modules/
 temp*
 tmp*
+.env*
+.dev.vars*

@@ -1,6 +1,6 @@
 {
-  "name": "dkjsiogu-checkin",
-  "main": "src/worker.js",
+  "name": "token-checkin",
+  "main": "src/worker.ts",
   "compatibility_date": "2026-02-26",
   "observability": {
     "logs": {
@@ -10,7 +10,7 @@
   },
   "triggers": {
     "crons": [
-      "0 */6 * * *"
+      "0 1/8 * * *"
     ]
   }
 }
