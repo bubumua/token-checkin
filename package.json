@@ -5,6 +5,7 @@
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
+    "sync-secrets": "pwsh -NoProfile -File scripts/sync-secrets.ps1 -LoginIfNeeded",
     "tail": "wrangler tail"
   },
   "devDependencies": {

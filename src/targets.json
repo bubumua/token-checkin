@@ -209,5 +209,23 @@
     "url": "https://jiuuij.de5.net",
     "newApiUser": "1892",
     "cookieSecret": "COOKIE_JOVERNA"
+  },
+  {
+    "name": "摸鱼公益",
+    "url": "https://clove.cc.cd",
+    "newApiUser": "3596",
+    "cookieSecret": "COOKIE_CLOVE"
+  },
+  {
+    "name": "HelloAI",
+    "url": "https://hello.xhyun.eu.cc",
+    "newApiUser": "1058",
+    "cookieSecret": "COOKIE_HELLOAI"
+  },
+  {
+    "name": "霸气",
+    "url": "https://ai.121628.xyz",
+    "newApiUser": "5462",
+    "cookieSecret": "COOKIE_BAQI"
   }
 ]

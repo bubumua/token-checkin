@@ -11,6 +11,7 @@ This repository is a TypeScript Cloudflare Worker project.
 - `src/types.ts`: shared TypeScript interfaces.
 - `src/targets.json`: target definitions (simplified schema, 4 fields per target).
 - `wrangler.json`: Worker name, entry file, cron triggers.
+- `scripts/sync-secrets.ps1`: syncs secrets from `.dev.vars` into Cloudflare Wrangler secrets.
 - `package.json`: local scripts for development, deploy, and log tailing.
 
 Keep runtime logic in `src/`. Avoid placing application code in root-level config files.
@@ -19,6 +20,7 @@ Keep runtime logic in `src/`. Avoid placing application code in root-level confi
 - `npm install`: install local dependencies (Wrangler, TypeScript, workers-types).
 - `npm run dev`: run Worker locally with Wrangler dev server.
 - `npm run deploy`: publish the Worker to Cloudflare.
+- `npm run sync-secrets`: sync cookie and Telegram secrets from `.dev.vars`, optionally triggering `wrangler login`.
 - `npm run tail`: stream production logs from Cloudflare.
 - `npx tsc --noEmit`: type-check without emitting files.
 - `npx wrangler secret put COOKIE_XXX`: set a cookie secret for a target.
@@ -55,4 +57,5 @@ When adding tests, place them under `tests/` and name files `*.test.ts`.
 ## Security & Configuration Tips
 - Never commit real cookies or secrets.
 - Store credentials only with Wrangler secrets.
+- Keep local secret sources in `.dev.vars`, which is already gitignored.
 - Cookie secrets contain the full Cookie header value — copy directly from browser DevTools.

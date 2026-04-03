@@ -2,7 +2,7 @@
 
 这个 Worker 支持多个签到目标，并会在定时触发时全部执行。
 
-当前已包含 34 个签到目标，配置在 `src/targets.json` 中。
+当前签到目标配置在 `src/targets.json` 中。
 
 ## 1. 准备
 
@@ -30,45 +30,44 @@ npm install
 - `cookieSecret`：Wrangler secret 名称
 - 签到路径默认为 `/api/user/checkin`，如需覆盖可加 `"checkinPath": "/api/user/claim_quota"`
 
-设置各站点 secret：
+在 `.dev.vars` 中维护对应 secret：
 
 ```bash
 # 值 = 从浏览器 DevTools 复制的完整 Cookie 字符串
 # 例如："session=xxx" 或 "session=xxx; cf_clearance=yyy"
+COOKIE_DKJSIOGU=session=xxx
+COOKIE_DUCKCODING=session=xxx
+TELEGRAM_BOT_TOKEN=123456:abc
+TELEGRAM_CHAT_ID=-1002222744081
+```
+
+然后批量同步到 Cloudflare：
+
+```bash
+npm run sync-secrets
+```
+
+脚本会：
+
+- 从 `.dev.vars` 读取值
+- 从 `src/targets.json` 收集需要的 `cookieSecret`
+- 检查 `wrangler` 登录状态，必要时执行 `npx wrangler login`
+- 同步 `TELEGRAM_BOT_TOKEN` 和 `TELEGRAM_CHAT_ID`
+
+如需先检查将同步哪些 secret，可执行：
+
+```bash
+pwsh -NoProfile -File scripts/sync-secrets.ps1 -DryRun
+```
+
+如果你仍想手动逐个设置，也可以继续使用 `src/targets.json` 里的 `cookieSecret` 名称：
+
+```bash
+# 例如：
 npx wrangler secret put COOKIE_DKJSIOGU
 npx wrangler secret put COOKIE_DUCKCODING
-npx wrangler secret put COOKIE_LINUXDOAPI
-npx wrangler secret put COOKIE_HOTARUAPI
+npx wrangler secret put COOKIE_DUCKCODING_LATEST
 npx wrangler secret put COOKIE_ZHANSI
-npx wrangler secret put COOKIE_ZZHDSGSSS
-npx wrangler secret put COOKIE_STEPHECURRY
-npx wrangler secret put COOKIE_CHENGMO
-npx wrangler secret put COOKIE_NIH
-npx wrangler secret put COOKIE_HUAN666
-npx wrangler secret put COOKIE_AIAPI3W
-npx wrangler secret put COOKIE_API925214
-npx wrangler secret put COOKIE_IDONTKNOWAPI
-npx wrangler secret put COOKIE_ZENSCALEAI
-npx wrangler secret put COOKIE_42API
-npx wrangler secret put COOKIE_COULSON
-npx wrangler secret put COOKIE_APIKEY_WELFARE
-npx wrangler secret put COOKIE_DEV88
-npx wrangler secret put COOKIE_THATAPI
-npx wrangler secret put COOKIE_ELYSIVER
-npx wrangler secret put COOKIE_AIDROUTER
-npx wrangler secret put COOKIE_DAIJU
-npx wrangler secret put COOKIE_MOAPI
-npx wrangler secret put COOKIE_LINUXDOEDURS
-npx wrangler secret put COOKIE_OPENAI_API_TEST_US_CI
-npx wrangler secret put COOKIE_LAOXI
-npx wrangler secret put COOKIE_YYBBWAN
-npx wrangler secret put COOKIE_SUIMI
-npx wrangler secret put COOKIE_DGBMC
-npx wrangler secret put COOKIE_MARYDOWN
-npx wrangler secret put COOKIE_DUDU
-npx wrangler secret put COOKIE_ZHENHAOJI
-npx wrangler secret put COOKIE_ARKAPI
-npx wrangler secret put COOKIE_JOVERNA
 npx wrangler secret put TELEGRAM_BOT_TOKEN
 npx wrangler secret put TELEGRAM_CHAT_ID
 ```
@@ -78,7 +77,7 @@ npx wrangler secret put TELEGRAM_CHAT_ID
 ## 3. 部署
 
 ```bash
-npx wrangler login
+npm run sync-secrets
 npm run deploy
 ```
 
@@ -131,5 +130,5 @@ npm run tail
 
 - Cookie secret 值直接从浏览器 DevTools 的 `Cookie:` 请求头复制即可。
 - 如某站点需要 `cf_clearance`，把它和 `session` 一起写入同一个 secret，用 `;` 分隔。
-- 若签到失败，优先更新对应的 `COOKIE_*` secret。
+- 更新 Cookie 后，优先修改 `.dev.vars`，再执行 `npm run sync-secrets`。
 - 若某站点是按北京时间 00:00 刷新，建议把 `cron` 调整到 UTC 对应时刻附近并保留冗余重试频率。
