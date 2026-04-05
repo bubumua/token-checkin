@@ -28,6 +28,16 @@ const FAILURE_PATTERNS = [
   /失败/,
 ];
 
+class MissingCookieSecretError extends Error {
+  secretName: string;
+
+  constructor(targetName: string, secretName: string) {
+    super(`[${targetName}] Missing secret ${secretName}`);
+    this.name = "MissingCookieSecretError";
+    this.secretName = secretName;
+  }
+}
+
 function stringifyBody(body: unknown): string {
   if (body === null || body === undefined) return "";
   if (typeof body === "string") return body;
@@ -58,9 +68,27 @@ function classifyCheckinState(responseOk: boolean, body: unknown): "already" | "
 function getCookie(env: Env, target: ResolvedTarget): string {
   const value = env[target.cookieSecret];
   if (!value || !String(value).trim()) {
-    throw new Error(`[${target.name}] Missing secret ${target.cookieSecret}`);
+    throw new MissingCookieSecretError(target.name, target.cookieSecret);
   }
   return String(value).trim();
+}
+
+function getResultGroupOrder(result: CheckinResult): number {
+  if (result.state === "success") return 0;
+  if (result.state === "already") return 1;
+  if (result.failureCategory === "missing_cookie") return 2;
+  return 3;
+}
+
+function sortResults(results: CheckinResult[]): CheckinResult[] {
+  return results
+    .map((result, index) => ({ result, index }))
+    .sort((left, right) => {
+      const orderDiff = getResultGroupOrder(left.result) - getResultGroupOrder(right.result);
+      if (orderDiff !== 0) return orderDiff;
+      return left.index - right.index;
+    })
+    .map(({ result }) => result);
 }
 
 async function runSingleCheckin(env: Env, target: ResolvedTarget): Promise<CheckinResult> {
@@ -120,6 +148,7 @@ export async function runCheckins(env: Env, targetName?: string): Promise<RunRes
           target: target.name || "unknown",
           ok: false,
           state: "failed",
+          failureCategory: error instanceof MissingCookieSecretError ? "missing_cookie" : "other",
           status: 0,
           requestedAt: new Date().toISOString(),
           error: error instanceof Error ? error.message : String(error),
@@ -128,8 +157,21 @@ export async function runCheckins(env: Env, targetName?: string): Promise<RunRes
     }),
   );
 
-  const success = results.filter((r) => r.state === "success").length;
-  const already = results.filter((r) => r.state === "already").length;
-  const failed = results.filter((r) => r.state === "failed").length;
-  return { ok: failed === 0, total: results.length, success, already, failed, results };
+  const sortedResults = sortResults(results);
+  const success = sortedResults.filter((r) => r.state === "success").length;
+  const already = sortedResults.filter((r) => r.state === "already").length;
+  const failed = sortedResults.filter((r) => r.state === "failed").length;
+  const missingCookieFailed = sortedResults.filter((r) => r.failureCategory === "missing_cookie").length;
+  const otherFailed = sortedResults.filter((r) => r.state === "failed" && r.failureCategory !== "missing_cookie").length;
+
+  return {
+    ok: failed === 0,
+    total: sortedResults.length,
+    success,
+    already,
+    failed,
+    missingCookieFailed,
+    otherFailed,
+    results: sortedResults,
+  };
 }

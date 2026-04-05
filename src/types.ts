@@ -26,6 +26,7 @@ export interface CheckinResult {
   target: string;
   ok: boolean;
   state: "already" | "success" | "failed";
+  failureCategory?: "missing_cookie" | "other";
   status: number;
   requestedAt: string;
   body?: unknown;
@@ -38,6 +39,8 @@ export interface RunResult {
   success: number;
   already: number;
   failed: number;
+  missingCookieFailed: number;
+  otherFailed: number;
   results: CheckinResult[];
 }
 

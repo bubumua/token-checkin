@@ -36,12 +36,13 @@ export function buildTelegramReport(result: RunResult, title = "[CF Checkin] 定
   const lines = [
     title,
     `时间(UTC): ${new Date().toISOString()}`,
-    `总计 ${result.total} | 成功 ${result.success} | 已签 ${result.already} | 失败 ${result.failed}`,
+    `总计 ${result.total} | 成功 ${result.success} | 已签失败 ${result.already} | 未配Cookie失败 ${result.missingCookieFailed} | 其他失败 ${result.otherFailed}`,
   ];
 
   const successItems = result.results.filter((r) => r.state === "success");
   const alreadyItems = result.results.filter((r) => r.state === "already");
-  const failedItems = result.results.filter((r) => r.state === "failed");
+  const missingCookieItems = result.results.filter((r) => r.failureCategory === "missing_cookie");
+  const otherFailedItems = result.results.filter((r) => r.state === "failed" && r.failureCategory !== "missing_cookie");
 
   if (successItems.length > 0) {
     lines.push("", `✅ 签到成功 (${successItems.length})`);
@@ -51,15 +52,23 @@ export function buildTelegramReport(result: RunResult, title = "[CF Checkin] 定
   }
 
   if (alreadyItems.length > 0) {
-    lines.push("", `⏭ 今日已签 (${alreadyItems.length})`);
+    lines.push("", `⏭ 已经签到因此失败 (${alreadyItems.length})`);
     for (const item of alreadyItems) {
       lines.push(`  ${item.target}`);
     }
   }
 
-  if (failedItems.length > 0) {
-    lines.push("", `❌ 签到失败 (${failedItems.length})`);
-    for (const item of failedItems) {
+  if (missingCookieItems.length > 0) {
+    lines.push("", `🔒 未配置Cookie失败 (${missingCookieItems.length})`);
+    for (const item of missingCookieItems) {
+      const reason = truncateText(pickFailureReason(item));
+      lines.push(reason ? `  ${item.target}: ${reason}` : `  ${item.target}`);
+    }
+  }
+
+  if (otherFailedItems.length > 0) {
+    lines.push("", `❌ 其他原因失败 (${otherFailedItems.length})`);
+    for (const item of otherFailedItems) {
       const reason = truncateText(pickFailureReason(item));
       lines.push(reason ? `  ${item.target}: ${reason}` : `  ${item.target}`);
     }

@@ -44,7 +44,7 @@ TELEGRAM_CHAT_ID=-1002222744081
 然后批量同步到 Cloudflare：
 
 ```bash
-npm run sync-secrets
+npm run update
 ```
 
 脚本会：
@@ -77,7 +77,7 @@ npx wrangler secret put TELEGRAM_CHAT_ID
 ## 3. 部署
 
 ```bash
-npm run sync-secrets
+npm run update
 npm run deploy
 ```
 
@@ -130,5 +130,5 @@ npm run tail
 
 - Cookie secret 值直接从浏览器 DevTools 的 `Cookie:` 请求头复制即可。
 - 如某站点需要 `cf_clearance`，把它和 `session` 一起写入同一个 secret，用 `;` 分隔。
-- 更新 Cookie 后，优先修改 `.dev.vars`，再执行 `npm run sync-secrets`。
+- 更新 Cookie 后，优先修改 `.dev.vars`，再执行 `npm run update`。
 - 若某站点是按北京时间 00:00 刷新，建议把 `cron` 调整到 UTC 对应时刻附近并保留冗余重试频率。
