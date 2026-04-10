@@ -49,14 +49,17 @@ function stringifyBody(body: unknown): string {
 }
 
 function classifyCheckinState(responseOk: boolean, body: unknown): "already" | "success" | "failed" {
-  if (!responseOk) return "failed";
+  const bodyText = stringifyBody(body);
+
+  if (!responseOk) {
+    if (ALREADY_PATTERNS.some((p) => p.test(bodyText))) return "already";
+    return "failed";
+  }
 
   if (body && typeof body === "object") {
     const obj = body as Record<string, unknown>;
     if (obj.ok === false || obj.success === false) return "failed";
   }
-
-  const bodyText = stringifyBody(body);
 
   if (ALREADY_PATTERNS.some((p) => p.test(bodyText))) return "already";
   if (SUCCESS_PATTERNS.some((p) => p.test(bodyText))) return "success";
