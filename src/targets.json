@@ -233,5 +233,11 @@
     "url": "https://yyds.215.im",
     "newApiUser": "7894",
     "cookieSecret": "COOKIE_XIAOLAJIAO"
+  },
+  {
+    "name": "magic",
+    "url": "https://magic-ai.zeabur.app",
+    "newApiUser": "2077",
+    "cookieSecret": "COOKIE_MAGIC"
   }
 ]
