@@ -151,10 +151,10 @@
     "cookieSecret": "COOKIE_LINUXDOEDURS"
   },
   {
-    "name": "openai.api-test.us.ci",
-    "url": "https://openai.api-test.us.ci",
+    "name": "abrdns",
+    "url": "https://new-api.abrdns.com",
     "newApiUser": "9035",
-    "cookieSecret": "COOKIE_OPENAI_API_TEST_US_CI"
+    "cookieSecret": "COOKIE_ABRDNS"
   },
   {
     "name": "蒸蚌",
@@ -239,5 +239,37 @@
     "url": "https://magic-ai.zeabur.app",
     "newApiUser": "2077",
     "cookieSecret": "COOKIE_MAGIC"
+  },
+  {
+    "name": "happyhorse",
+    "url": "https://happyhorse.app",
+    "newApiUser": "0",
+    "cookieSecret": "COOKIE_HAPPYHORSE",
+    "checkinPath": "/zh/dashboard/ai-video"
+  },
+  {
+    "name": "huaibao",
+    "url": "https://ai.huaibao.top",
+    "newApiUser": "1804",
+    "cookieSecret": "COOKIE_HUAIBAO"
+  },
+  {
+    "name": "free9enz",
+    "url": "https://free.9e.nz",
+    "newApiUser": "0",
+    "cookieSecret": "COOKIE_FREE9ENZ",
+    "checkinPath": "/checkin"
+  },
+  {
+    "name": "CHY API",
+    "url": "https://api.xn--chy-js0fk50c.top",
+    "newApiUser": "31961",
+    "cookieSecret": "COOKIE_CHYAPI"
+  },
+  {
+    "name": "无的公益站",
+    "url": "https://zptr.asia",
+    "newApiUser": "1649",
+    "cookieSecret": "COOKIE_ZPTR"
   }
 ]
