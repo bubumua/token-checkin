@@ -7,12 +7,6 @@
     "checkinPath": "/api/user/claim_quota"
   },
   {
-    "name": "duckcoding-old",
-    "url": "https://free.duckcoding.com",
-    "newApiUser": "8795",
-    "cookieSecret": "COOKIE_DUCKCODING"
-  },
-  {
     "name": "duckcoding-new",
     "url": "https://www.duckcoding.ai",
     "newApiUser": "40208",
@@ -181,7 +175,7 @@
     "cookieSecret": "COOKIE_DGBMC"
   },
   {
-    "name": "marydown",
+    "name": "marybrown",
     "url": "https://marybrown.dpdns.org",
     "newApiUser": "1107",
     "cookieSecret": "COOKIE_MARYDOWN"
@@ -197,12 +191,6 @@
     "url": "https://api.zhenhaoji.qzz.io",
     "newApiUser": "1780",
     "cookieSecret": "COOKIE_ZHENHAOJI"
-  },
-  {
-    "name": "arkapi",
-    "url": "https://windhub.cc",
-    "newApiUser": "1283",
-    "cookieSecret": "COOKIE_ARKAPI"
   },
   {
     "name": "Joverna",
@@ -271,5 +259,11 @@
     "url": "https://zptr.asia",
     "newApiUser": "1649",
     "cookieSecret": "COOKIE_ZPTR"
+  },
+  {
+    "name": "墨叶With API",
+    "url": "https://withapi.mosoft.icu",
+    "newApiUser": "258",
+    "cookieSecret": "COOKIE_WITHAPI"
   }
 ]
