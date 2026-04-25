@@ -4,6 +4,7 @@ export interface TargetConfig {
   newApiUser: string;
   cookieSecret: string;
   checkinPath?: string;
+  enable?: boolean;
 }
 
 export interface ResolvedTarget {

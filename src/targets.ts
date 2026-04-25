@@ -27,11 +27,15 @@ export function parseTargets(env: Env): ResolvedTarget[] {
     if (!Array.isArray(parsed) || parsed.length === 0) {
       throw new Error("CHECKIN_TARGETS must be a non-empty JSON array");
     }
-    return (parsed as TargetConfig[]).map(resolveTarget);
+    return (parsed as TargetConfig[])
+    .filter((t) => t.enable !== false)
+    .map(resolveTarget);
   }
 
   if (Array.isArray(defaultTargets) && defaultTargets.length > 0) {
-    return (defaultTargets as TargetConfig[]).map(resolveTarget);
+    return (defaultTargets as TargetConfig[])
+      .filter((t) => t.enable !== false)
+      .map(resolveTarget);
   }
 
   throw new Error("No targets configured: set CHECKIN_TARGETS or provide src/targets.json");

@@ -4,7 +4,8 @@
     "url": "https://api.dkjsiogu.me",
     "newApiUser": "2756",
     "cookieSecret": "COOKIE_DKJSIOGU",
-    "checkinPath": "/api/user/claim_quota"
+    "checkinPath": "/api/user/claim_quota",
+    "enable": false
   },
   {
     "name": "duckcoding-new",
@@ -28,19 +29,22 @@
     "name": "鱼汤",
     "url": "https://ai.zhansi.top",
     "newApiUser": "1224",
-    "cookieSecret": "COOKIE_ZHANSI"
+    "cookieSecret": "COOKIE_ZHANSI",
+    "enable": false
   },
   {
     "name": "Neb",
     "url": "https://ai.zzhdsgsss.xyz",
     "newApiUser": "1943",
-    "cookieSecret": "COOKIE_ZZHDSGSSS"
+    "cookieSecret": "COOKIE_ZZHDSGSSS",
+    "enable": false
   },
   {
     "name": "stephecurry",
     "url": "https://stephecurry.asia",
     "newApiUser": "2137",
-    "cookieSecret": "COOKIE_STEPHECURRY"
+    "cookieSecret": "COOKIE_STEPHECURRY",
+    "enable": false
   },
   {
     "name": "CM-API",
@@ -52,7 +56,8 @@
     "name": "nih",
     "url": "https://nih.cc",
     "newApiUser": "1825",
-    "cookieSecret": "COOKIE_NIH"
+    "cookieSecret": "COOKIE_NIH",
+    "enable": false
   },
   {
     "name": "huan666",
@@ -154,7 +159,8 @@
     "name": "蒸蚌",
     "url": "https://laoxi.ethan010203.online",
     "newApiUser": "2691",
-    "cookieSecret": "COOKIE_LAOXI"
+    "cookieSecret": "COOKIE_LAOXI",
+    "enable": false
   },
   {
     "name": "yybbwan",
@@ -265,5 +271,11 @@
     "url": "https://withapi.mosoft.icu",
     "newApiUser": "258",
     "cookieSecret": "COOKIE_WITHAPI"
+  },
+  {
+    "name": "CnGPT",
+    "url": "https://cngpt.net",
+    "newApiUser": "378",
+    "cookieSecret": "COOKIE_CNGPT"
   }
 ]
