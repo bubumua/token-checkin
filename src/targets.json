@@ -50,7 +50,8 @@
     "name": "CM-API",
     "url": "https://api.chengmo.cc.cd",
     "newApiUser": "181",
-    "cookieSecret": "COOKIE_CHENGMO"
+    "cookieSecret": "COOKIE_CHENGMO",
+    "enable": false
   },
   {
     "name": "nih",
@@ -105,7 +106,8 @@
     "name": "APIKEY_WELFARE",
     "url": "https://welfare.apikey.cc",
     "newApiUser": "5304",
-    "cookieSecret": "COOKIE_APIKEY_WELFARE"
+    "cookieSecret": "COOKIE_APIKEY_WELFARE",
+    "enable": false
   },
   {
     "name": "dev88",
@@ -208,13 +210,15 @@
     "name": "摸鱼公益",
     "url": "https://clove.cc.cd",
     "newApiUser": "3596",
-    "cookieSecret": "COOKIE_CLOVE"
+    "cookieSecret": "COOKIE_CLOVE",
+    "enable": false
   },
   {
     "name": "HelloAI",
     "url": "https://hello.xhyun.eu.cc",
     "newApiUser": "1058",
-    "cookieSecret": "COOKIE_HELLOAI"
+    "cookieSecret": "COOKIE_HELLOAI",
+    "enable": false
   },
   {
     "name": "霸气",
@@ -252,13 +256,15 @@
     "url": "https://free.9e.nz",
     "newApiUser": "0",
     "cookieSecret": "COOKIE_FREE9ENZ",
-    "checkinPath": "/checkin"
+    "checkinPath": "/checkin",
+    "enable": false
   },
   {
     "name": "CHY API",
     "url": "https://api.xn--chy-js0fk50c.top",
     "newApiUser": "31961",
-    "cookieSecret": "COOKIE_CHYAPI"
+    "cookieSecret": "COOKIE_CHYAPI",
+    "enable": false
   },
   {
     "name": "无的公益站",
@@ -277,5 +283,11 @@
     "url": "https://cngpt.net",
     "newApiUser": "378",
     "cookieSecret": "COOKIE_CNGPT"
+  },
+  {
+    "name": "api00000",
+    "url": "https://api.00000.mom",
+    "newApiUser": "1976",
+    "cookieSecret": "COOKIE_API00000"
   }
 ]
