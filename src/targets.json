@@ -137,7 +137,8 @@
     "name": "daiju",
     "url": "https://api.daiju.live",
     "newApiUser": "7304",
-    "cookieSecret": "COOKIE_DAIJU"
+    "cookieSecret": "COOKIE_DAIJU",
+    "enable": false
   },
   {
     "name": "moapi",
@@ -289,5 +290,23 @@
     "url": "https://api.00000.mom",
     "newApiUser": "1976",
     "cookieSecret": "COOKIE_API00000"
+  },
+  {
+    "name": "muyuan",
+    "url": "https://muyuan.do",
+    "newApiUser": "6480",
+    "cookieSecret": "COOKIE_MUYUAN"
+  },
+  {
+    "name": "BJGPT",
+    "url": "https://gpt.bjqdtd.com",
+    "newApiUser": "4395",
+    "cookieSecret": "COOKIE_BJGPT"
+  },
+  {
+    "name": "AokiCore",
+    "url": "https://ai.muapi.cn",
+    "newApiUser": "2352",
+    "cookieSecret": "COOKIE_AOKICORE"
   }
 ]
